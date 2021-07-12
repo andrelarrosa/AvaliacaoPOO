@@ -13,6 +13,14 @@ public class Arquivo {
 
 	private String path;
 	
+	public String getPath() {
+		return path;
+	}
+
+	public void setPath(String path) {
+		this.path = path;
+	}
+
 	public static void lerArquivo(String path) throws IOException {
 		BufferedReader buffReader = new BufferedReader(new FileReader(path));
 		String linha = "";

@@ -48,11 +48,13 @@ public class ArquivoView {
 			if(configuracao == 1) {
 				System.out.println("informe o caminho do arquivo: ");
 				String path = lerEntradaString();
-				arquivo.somarNumerosArquivo(path);	
+				arquivo.setPath(path);
+				arquivo.somarNumerosArquivo(arquivo.getPath());	
 			}else {
 				System.out.println("informe o caminho do arquivo: ");
 				String path = lerEntradaString();
-				arquivo.somarNumerosArquivoQuebrado(path);
+				arquivo.setPath(path);
+				arquivo.somarNumerosArquivoQuebrado(arquivo.getPath());
 			}
 		} else if(operacao == 2) {
 			int configuracao = exibirMenuConfiguracao();
@@ -61,40 +63,47 @@ public class ArquivoView {
 				String path = lerEntradaString();
 				System.out.println("Informe o valor que deseja encontrar: ");
 				int valor = lerEntradaInt();
-				System.out.println(arquivo.encontrarValor(path, valor));	
+				arquivo.setPath(path);
+				System.out.println(arquivo.encontrarValor(arquivo.getPath(), valor));	
 			}else {
 				System.out.println("informe o caminho do arquivo: ");
 				String path = lerEntradaString();
 				System.out.println("Informe o valor que deseja encontrar: ");
 				double valor = lerEntradaDouble();
-				System.out.println(arquivo.encontrarValorQuebrado(path, valor));
+				arquivo.setPath(path);
+				System.out.println(arquivo.encontrarValorQuebrado(arquivo.getPath(), valor));
 			}
 		}else if(operacao == 3) {
 			int configuracao = exibirMenuConfiguracao();
 			if(configuracao == 1) {
 				System.out.println("informe o caminho do arquivo: ");
 				String path = lerEntradaString();
-				arquivo.calcularMedia(path);	
+				arquivo.setPath(path);
+				arquivo.calcularMedia(arquivo.getPath());	
 			}else {
 				System.out.println("informe o caminho do arquivo: ");
 				String path = lerEntradaString();
-				arquivo.calcularMediaQuebrado(path);
+				arquivo.setPath(path);
+				arquivo.calcularMediaQuebrado(arquivo.getPath());
 			}
 		}else if(operacao == 4) {
 			int configuracao = exibirMenuConfiguracao();
 			System.out.println("informe o caminho do arquivo: ");
 			String path = lerEntradaString();
-			arquivo.lerArquivo(path);
+			arquivo.setPath(path);
+			arquivo.lerArquivo(arquivo.getPath());
 		}else if(operacao == 5) {
 			int configuracao = exibirMenuConfiguracao();
 			if(configuracao == 1) {
 				System.out.println("informe o caminho do arquivo: ");
 				String path = lerEntradaString();
-				arquivo.encontrarMaiorNumero(path);	
+				arquivo.setPath(path);
+				arquivo.encontrarMaiorNumero(arquivo.getPath());	
 			}else {
 				System.out.println("informe o caminho do arquivo: ");
 				String path = lerEntradaString();
-				arquivo.encontrarMaiorNumeroQuebrado(path);
+				arquivo.setPath(path);
+				arquivo.encontrarMaiorNumeroQuebrado(arquivo.getPath());
 			}
 			
 		}else if(operacao == 6) {
@@ -102,11 +111,13 @@ public class ArquivoView {
 			if(configuracao == 1) {
 				System.out.println("informe o caminho do arquivo: ");
 				String path = lerEntradaString();
-				arquivo.encontrarMenorNumero(path);	
+				arquivo.setPath(path);
+				arquivo.encontrarMenorNumero(arquivo.getPath());	
 			}else {
 				System.out.println("informe o caminho do arquivo: ");
 				String path = lerEntradaString();
-				arquivo.encontrarMenorNumeroQuebrado(path);	
+				arquivo.setPath(path);
+				arquivo.encontrarMenorNumeroQuebrado(arquivo.getPath());	
 			}
 		}else if(operacao == 7) {
 			return false;
